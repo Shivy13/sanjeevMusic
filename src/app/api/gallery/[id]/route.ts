@@ -2,12 +2,16 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/db";
 import { galleryItems } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const itemId = parseInt(id, 10);
     if (isNaN(itemId)) {
@@ -67,6 +71,9 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const itemId = parseInt(id, 10);
     if (isNaN(itemId)) {

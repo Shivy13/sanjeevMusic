@@ -3,12 +3,16 @@ import { getDb } from "@/db";
 import { youtubeVideos } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { extractYouTubeId } from "@/lib/youtube";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const videoId = parseInt(id, 10);
     if (isNaN(videoId)) {
@@ -68,6 +72,9 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const videoId = parseInt(id, 10);
     if (isNaN(videoId)) {

@@ -2,14 +2,27 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/db";
 import { siteSettings } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { cookies } from "next/headers";
+import { getAdminSessionSecret } from "@/lib/admin-auth";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function GET() {
   try {
     const db = getDb();
+    const cookieStore = await cookies();
+    const session = cookieStore.get("admin_session");
+    const isAdmin = session?.value === getAdminSessionSecret();
+
     const list = await db.select().from(siteSettings);
     const settingsMap: Record<string, string> = {};
     list.forEach((s) => {
-      settingsMap[s.settingKey] = s.settingValue;
+      if (
+        isAdmin ||
+        s.settingKey === "welcome_marquee_en" ||
+        s.settingKey === "welcome_marquee_hi"
+      ) {
+        settingsMap[s.settingKey] = s.settingValue;
+      }
     });
 
     return NextResponse.json({ success: true, settings: settingsMap });
@@ -24,6 +37,9 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const body = await request.json();
     const { settings } = body; // Record<string, string>
 

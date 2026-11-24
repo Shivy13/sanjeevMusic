@@ -7,9 +7,13 @@ import {
   generateOrganizerToDevoteeWhatsAppText,
   createWhatsAppUrl,
 } from "@/lib/whatsapp";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function POST(request: Request) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const db = getDb();
     const body = await request.json();
     const { bookingId, target, customMessage } = body; // target = "organizer" | "client"

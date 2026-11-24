@@ -3,6 +3,7 @@ import { getDb } from "@/db";
 import { youtubeVideos, siteSettings } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { fetchYouTubeOEmbed } from "@/lib/youtube";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 // Curated live pool of devotional videos representing latest releases from Mandali
 const DYNAMIC_DEVOTIONAL_RELEASES = [
@@ -50,6 +51,9 @@ const DYNAMIC_DEVOTIONAL_RELEASES = [
 
 export async function POST(request: Request) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const db = getDb();
     let channelId = "";
     try {

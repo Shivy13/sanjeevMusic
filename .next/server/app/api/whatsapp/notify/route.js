@@ -5,7 +5,7 @@ R.c("server/chunks/src_lib_whatsapp_ts_01h2v6r4et-k4._.js")
 R.c("server/chunks/_0rycmslgdhuv0._.js")
 R.c("server/chunks/[root-of-the-server]__0aj-mnvp-3b6h._.js")
 R.c("server/chunks/[root-of-the-server]__15bjnu5yieigz._.js")
-R.c("server/chunks/node_modules_next_0g8xe7c6fvfgl._.js")
+R.c("server/chunks/_18dswzbkqdslt._.js")
 R.c("server/chunks/_next-internal_server_app_api_whatsapp_notify_route_actions_1i9wca6xpabxc.js")
 R.m(40469)
 module.exports=R.m(40469).exports

@@ -2,12 +2,16 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/db";
 import { bookings } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const bookingId = parseInt(id, 10);
     if (isNaN(bookingId)) {
@@ -30,6 +34,13 @@ export async function PUT(
       specialRequests,
       whatsappNotified,
     } = body;
+
+    if (status !== undefined && !["pending", "confirmed", "completed", "cancelled"].includes(status)) {
+      return NextResponse.json(
+        { success: false, error: "Invalid booking status" },
+        { status: 400 }
+      );
+    }
 
     const updateData: Record<string, unknown> = {
       updatedAt: new Date(),
@@ -70,6 +81,9 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const { id } = await params;
     const bookingId = parseInt(id, 10);
     if (isNaN(bookingId)) {

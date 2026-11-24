@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
+import { getAdminSessionSecret } from "@/lib/admin-auth";
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "ADMIN";
-const ADMIN_TOKEN_SECRET = "devotional_admin_session_secret_key_2025";
 
 export async function POST(request: Request) {
   try {
@@ -17,7 +17,8 @@ export async function POST(request: Request) {
     }
 
     const cookieStore = await cookies();
-    cookieStore.set("admin_session", ADMIN_TOKEN_SECRET, {
+    const sessionSecret = getAdminSessionSecret();
+    cookieStore.set("admin_session", sessionSecret, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 60 * 60 * 24 * 7, // 7 days
@@ -26,7 +27,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      token: ADMIN_TOKEN_SECRET,
       message: "Admin authenticated successfully",
     });
   } catch {
@@ -42,7 +42,7 @@ export async function GET() {
     const cookieStore = await cookies();
     const session = cookieStore.get("admin_session");
 
-    if (session && session.value === ADMIN_TOKEN_SECRET) {
+    if (session && session.value === getAdminSessionSecret()) {
       return NextResponse.json({ authenticated: true });
     }
 

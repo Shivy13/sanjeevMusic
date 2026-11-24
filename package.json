@@ -6,7 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "tsx src/scripts/run-migrate.ts",
+    "db:seed": "tsx src/scripts/run-seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed"
   },
   "dependencies": {
     "dotenv": "17.3.1",
@@ -28,6 +31,7 @@
     "eslint-config-next": "^16.3.8",
     "postcss": "8.5.23",
     "tailwindcss": "4.1.17",
+    "tsx": "^4.23.15",
     "typescript": "5.9.3"
   }
 }

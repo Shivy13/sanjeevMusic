@@ -1,4 +1,5 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" });
 import { seedDatabase } from "../db/seed";
 import { getPool } from "../db/index";
 

@@ -131,13 +131,6 @@ export default function AdminPage() {
       if (data.authenticated) {
         setIsAuthenticated(true);
         loadAllData();
-      } else {
-        // Also check localStorage
-        const storedToken = localStorage.getItem("devotional_admin_token");
-        if (storedToken === "ADMIN_AUTHENTICATED") {
-          setIsAuthenticated(true);
-          loadAllData();
-        }
       }
     } catch {
       setIsAuthenticated(false);

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getDb } from "@/db";
 import { galleryItems } from "@/db/schema";
 import { desc, eq, asc } from "drizzle-orm";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function GET(request: Request) {
   try {
@@ -41,6 +42,9 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    const unauthorized = await requireAdminSession();
+    if (unauthorized) return unauthorized;
+
     const body = await request.json();
     const {
       title,

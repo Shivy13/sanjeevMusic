@@ -6,12 +6,18 @@ import {
   generateDevoteeToOrganizerWhatsAppText,
   createWhatsAppUrl,
 } from "@/lib/whatsapp";
+import { requireAdminSession } from "@/lib/admin-auth";
 
 export async function GET(request: Request) {
   try {
     const db = getDb();
     const { searchParams } = new URL(request.url);
     const view = searchParams.get("view"); // "public" or "admin"
+
+    if (view !== "public") {
+      const unauthorized = await requireAdminSession();
+      if (unauthorized) return unauthorized;
+    }
 
     const allBookings = await db
       .select()
@@ -62,6 +68,20 @@ export async function POST(request: Request) {
     if (!clientName || !phone || !eventType || !eventDate || !timeSlot || !venueAddress || !city) {
       return NextResponse.json(
         { success: false, error: "Missing required booking fields" },
+        { status: 400 }
+      );
+    }
+
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(eventDate)) {
+      return NextResponse.json(
+        { success: false, error: "Event date must use YYYY-MM-DD format" },
+        { status: 400 }
+      );
+    }
+
+    if (String(phone).replace(/\D/g, "").length < 10) {
+      return NextResponse.json(
+        { success: false, error: "A valid phone number is required" },
         { status: 400 }
       );
     }
