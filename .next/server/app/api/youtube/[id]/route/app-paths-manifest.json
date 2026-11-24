@@ -1,0 +1,3 @@
+{
+  "/api/youtube/[id]/route": "app/api/youtube/[id]/route.js"
+}

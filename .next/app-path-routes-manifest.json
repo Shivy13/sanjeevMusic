@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/api/admin/auth/route": "/api/admin/auth",
+  "/api/bookings/[id]/route": "/api/bookings/[id]",
+  "/api/bookings/route": "/api/bookings",
+  "/api/gallery/[id]/route": "/api/gallery/[id]",
+  "/api/gallery/route": "/api/gallery",
+  "/api/health/route": "/api/health",
+  "/api/settings/route": "/api/settings",
+  "/api/whatsapp/notify/route": "/api/whatsapp/notify",
+  "/api/youtube/[id]/route": "/api/youtube/[id]",
+  "/api/youtube/route": "/api/youtube",
+  "/api/youtube/sync/route": "/api/youtube/sync",
+  "/page": "/"
+}

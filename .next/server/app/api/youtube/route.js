@@ -1,0 +1,10 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/youtube/route.js")
+R.c("server/chunks/[root-of-the-server]__0siflaj4vc1qq._.js")
+R.c("server/chunks/_1k-rij1feul0x._.js")
+R.c("server/chunks/src_db_schema_ts_1v71cyrqi2qt9._.js")
+R.c("server/chunks/[root-of-the-server]__15bjnu5yieigz._.js")
+R.c("server/chunks/[root-of-the-server]__0aj-mnvp-3b6h._.js")
+R.c("server/chunks/node_modules_next_0g8xe7c6fvfgl._.js")
+R.c("server/chunks/_next-internal_server_app_api_youtube_route_actions_1h_fxi26_5o58.js")
+R.m(25191)
+module.exports=R.m(25191).exports

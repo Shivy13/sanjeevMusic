@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/admin/auth/route": "app/api/admin/auth/route.js",
+  "/api/bookings/[id]/route": "app/api/bookings/[id]/route.js",
+  "/api/bookings/route": "app/api/bookings/route.js",
+  "/api/gallery/[id]/route": "app/api/gallery/[id]/route.js",
+  "/api/gallery/route": "app/api/gallery/route.js",
+  "/api/health/route": "app/api/health/route.js",
+  "/api/settings/route": "app/api/settings/route.js",
+  "/api/whatsapp/notify/route": "app/api/whatsapp/notify/route.js",
+  "/api/youtube/[id]/route": "app/api/youtube/[id]/route.js",
+  "/api/youtube/route": "app/api/youtube/route.js",
+  "/api/youtube/sync/route": "app/api/youtube/sync/route.js",
+  "/page": "app/page.js"
+}
