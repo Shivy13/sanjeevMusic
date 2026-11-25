@@ -19,7 +19,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LanguageCo
 ;
 ;
 const metadata = {
-    title: "पं. रामेश्वर शर्मा — जागरण, सुंदरकांड व भजन संकीर्तन मंडल | Devotional Booking & Portfolio",
+    title: "पं. संजीव गोस्वामी — जागरण, सुंदरकांड व भजन संकीर्तन मंडल | Devotional Booking & Portfolio",
     description: "Organizers of Mata Ka Vishal Jagran, Akhand Sundarkand Paath, Khatu Shyam Bhajan Sandhya & Mata Ki Chowki. Book auspicious dates, explore devotional gallery & stream latest YouTube bhajans.",
     icons: {
         icon: "/favicon.ico"

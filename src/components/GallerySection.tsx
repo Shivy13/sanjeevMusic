@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { Sparkles, Play, Image as ImageIcon, X, MapPin, Calendar, ExternalLink } from "lucide-react";
 
@@ -28,24 +29,24 @@ export default function GallerySection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const fetchGallery = async () => {
+      setLoading(true);
+      try {
+        const url = selectedCategory === "all" ? "/api/gallery" : `/api/gallery?category=${selectedCategory}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (data.success) {
+          setItems(data.items || []);
+        }
+      } catch (e) {
+        console.error("Gallery fetch failed:", e);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchGallery();
   }, [selectedCategory]);
-
-  const fetchGallery = async () => {
-    setLoading(true);
-    try {
-      const url = selectedCategory === "all" ? "/api/gallery" : `/api/gallery?category=${selectedCategory}`;
-      const res = await fetch(url);
-      const data = await res.json();
-      if (data.success) {
-        setItems(data.items || []);
-      }
-    } catch (e) {
-      console.error("Gallery fetch failed:", e);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const categories = [
     { id: "all", label: t.filterAll },
@@ -146,9 +147,11 @@ export default function GallerySection() {
                 >
                   {/* Media Thumbnail Container */}
                   <div className="relative aspect-4/3 overflow-hidden bg-black">
-                    <img
+                    <Image
                       src={item.thumbnailUrl || item.mediaUrl}
                       alt={displayTitle}
+                      width={400}
+                      height={300}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />

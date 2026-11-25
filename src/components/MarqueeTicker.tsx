@@ -22,8 +22,8 @@ export default function MarqueeTicker() {
 
   const defaultText =
     language === "hi"
-      ? "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ आगामी नवरात्र, हनुमान जन्मोत्सव एवं एकादशी संकीर्तन हेतु अग्रिम बुकिंग जारी ॥ संपर्क: +91 98765 43210 ॥ संगीतमय सुंदरकांड पाठ एवं विशाल भगवती जागरण ॥"
-      : "॥ Jai Mata Di ॥ Jai Shree Ram ॥ Hare Ka Sahara Baba Shyam Hamara ॥ Advance Bookings open for upcoming Navratri, Hanuman Jayanti & Ekadashi ॥ Contact: +91 98765 43210 ॥";
+      ? "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ आगामी नवरात्र, हनुमान जन्मोत्सव एवं एकादशी संकीर्तन हेतु अग्रिम बुकिंग जारी ॥ संपर्क: +91 9891142916 ॥ संगीतमय सुंदरकांड पाठ एवं विशाल भगवती जागरण ॥"
+      : "॥ Jai Mata Di ॥ Jai Shree Ram ॥ Hare Ka Sahara Baba Shyam Hamara ॥ Advance Bookings open for upcoming Navratri, Hanuman Jayanti & Ekadashi ॥ Contact: +91 9891142916 ॥";
 
   const display = tickerText || defaultText;
 

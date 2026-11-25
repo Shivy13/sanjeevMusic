@@ -483,6 +483,10 @@
     pointer-events: none;
   }
 
+  .visible {
+    visibility: visible;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -960,6 +964,10 @@
 
   .cursor-pointer {
     cursor: pointer;
+  }
+
+  .resize {
+    resize: both;
   }
 
   .grid-cols-1 {
@@ -2725,6 +2733,26 @@
     }
   }
 
+  .text-amber-500\/60 {
+    color: #f99c0099;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-amber-500\/60 {
+      color: color-mix(in oklab, var(--color-amber-500) 60%, transparent);
+    }
+  }
+
+  .text-amber-500\/70 {
+    color: #f99c00b3;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-amber-500\/70 {
+      color: color-mix(in oklab, var(--color-amber-500) 70%, transparent);
+    }
+  }
+
   .text-blue-300 {
     color: var(--color-blue-300);
   }
@@ -2824,6 +2852,10 @@
 
   .opacity-30 {
     opacity: .3;
+  }
+
+  .opacity-80 {
+    opacity: .8;
   }
 
   .shadow-2xl {

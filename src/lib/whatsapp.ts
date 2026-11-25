@@ -35,7 +35,7 @@ export function generateDevoteeToOrganizerWhatsAppText(data: BookingNotification
   const eventName = formatEventTypeName(data.eventType);
   return `॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥
 
-सादर प्रणाम पं. रामेश्वर शर्मा जी,
+सादर प्रणाम पं. संजीव गोस्वामी जी,
 मैं आपके मंडल के माध्यम से धार्मिक आयोजन हेतु बुकिंग अनुरोध प्रेषित कर रहा/रही हूँ।
 
 📋 *बुकिंग संदर्भ (Ref ID):* #${data.bookingRef}
@@ -71,7 +71,7 @@ export function generateOrganizerToDevoteeWhatsAppText(
   return `॥ जय माता दी ॥ जय श्री राम ॥
 
 प्रिय यजमान ${data.clientName} जी,
-पं. रामेश्वर शर्मा एवं श्री बांके बिहारी मानस जागरण मंडल की ओर से सप्रेम नमस्कार।
+पं. संजीव गोस्वामी एवं श्री बांके बिहारी मानस जागरण मंडल की ओर से सप्रेम नमस्कार।
 
 आपके धार्मिक आयोजन की बुकिंग स्थिति अद्यतित कर दी गई है:
 
@@ -83,7 +83,7 @@ export function generateOrganizerToDevoteeWhatsAppText(
 📌 *वर्तमान स्थिति:* ${statusHindi}
 ${adminNotes ? `📝 *मंडल संदेश:* ${adminNotes}\n` : ""}
 किसी भी सहयोग या शृंगार/झांकी चर्चा हेतु सीधे संपर्क करें:
-📞 पं. रामेश्वर शर्मा: +91 98765 43210
+📞 पं. संजीव गोस्वामी: +91 9891142916
 ॥ हर हर महादेव ॥ जय श्री राधे ॥`.trim();
 }
 

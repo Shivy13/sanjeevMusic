@@ -4,7 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "पं. रामेश्वर शर्मा — जागरण, सुंदरकांड व भजन संकीर्तन मंडल | Devotional Booking & Portfolio",
+  title: "पं. संजीव गोस्वामी — जागरण, सुंदरकांड व भजन संकीर्तन मंडल | Devotional Booking & Portfolio",
   description:
     "Organizers of Mata Ka Vishal Jagran, Akhand Sundarkand Paath, Khatu Shyam Bhajan Sandhya & Mata Ki Chowki. Book auspicious dates, explore devotional gallery & stream latest YouTube bhajans.",
   icons: {

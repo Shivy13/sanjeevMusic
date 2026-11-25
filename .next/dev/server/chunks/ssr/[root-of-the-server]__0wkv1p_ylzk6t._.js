@@ -213,7 +213,7 @@ const translations = {
         formName: "Devotee / Organizer Name",
         formNamePlaceholder: "e.g. Ramesh Sharma",
         formPhone: "WhatsApp Phone Number",
-        formPhonePlaceholder: "+91 98765 43210",
+        formPhonePlaceholder: "+91 9891142916",
         formPhoneHint: "Booking confirmation & updates will be sent to this WhatsApp number",
         formEmail: "Email Address (Optional)",
         formEmailPlaceholder: "devotee@example.com",
@@ -275,7 +275,7 @@ const translations = {
     },
     hi: {
         // Nav
-        siteTitle: "पं. रामेश्वर शर्मा",
+        siteTitle: "पं. संजीव गोस्वामी",
         siteSubtitle: "जागरण, सुंदरकांड एवं भजन संकीर्तन मंडल",
         navHome: "मुख्य पृष्ठ",
         navServices: "धार्मिक सेवाएं",
@@ -333,7 +333,7 @@ const translations = {
         formName: "यजमान / आयोजक का नाम",
         formNamePlaceholder: "उदा. पं. रमेश शर्मा",
         formPhone: "व्हाट्सएप मोबाइल नंबर",
-        formPhonePlaceholder: "+91 98765 43210",
+        formPhonePlaceholder: "+91 9891142916",
         formPhoneHint: "बुकिंग की पुष्टि एवं सूचना इसी व्हाट्सएप नंबर पर भेजी जाएगी",
         formEmail: "ईमेल आईडी (वैकल्पिक)",
         formEmailPlaceholder: "devotee@example.com",

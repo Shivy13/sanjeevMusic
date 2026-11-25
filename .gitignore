@@ -1,1 +1,10 @@
 /node_modules
+
+
+curl -X POST "https://opencode.ai/inference/openai/v1/chat/completions" \
+  -H "Authorization: Bearer oc_sk_aeaf2a109bc3_SRSQ1T2SwDTjy05L4LkaIWXW-kAkZY3U" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "kimi-k3",
+    "messages": [{ "role": "user", "content": "Say hi" }]
+  }'

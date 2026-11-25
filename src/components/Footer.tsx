@@ -115,7 +115,7 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a href="tel:+919876543210" className="text-white hover:text-emerald-300 font-semibold">
-                  +91 98765 43210
+                  +91 9891142916
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
@@ -143,7 +143,7 @@ export default function Footer() {
         {/* Bottom Bar with subtle Admin Access */}
         <div className="pt-8 border-t border-amber-950 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-amber-400/60">
           <div className="flex items-center gap-1.5">
-            <span>© {new Date().getFullYear()} {t.siteTitle}. {t.allRightsReserved}</span>
+            <span suppressHydrationWarning>© {new Date().getFullYear()} {t.siteTitle}. {t.allRightsReserved}</span>
           </div>
 
           <div className="flex items-center gap-6">

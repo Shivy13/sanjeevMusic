@@ -111,6 +111,33 @@ export default function AdminPage() {
     item?: GalleryItem;
   }>({ open: false, mode: "add" });
 
+  // -------------------------------------------------------------
+  // DYNAMIC MEDIA URL GENERATOR
+  // -------------------------------------------------------------
+  // Creates a placeholder image URL dynamically from form data so the
+  // admin never has to type a media URL manually.
+  const generateMediaUrl = (
+    title: string,
+    category: string,
+    mediaType: string,
+    eventDate?: string | null
+  ) => {
+    const safeTitle = encodeURIComponent(title || "Devotional Event");
+    const safeCategory = encodeURIComponent(category || "event");
+    const dateSuffix = eventDate ? `-${eventDate}` : "";
+    const seed = `${safeTitle}-${safeCategory}${dateSuffix}`.slice(0, 60);
+
+    // Dark devotional theme colors matching the site
+    const bgColor = "7c2d12"; // amber-900
+    const textColor = "f7eedf"; // cream
+
+    const mediaUrl = `https://placehold.co/800x600/png?text=${safeTitle}&font=cinzel&bg=${bgColor}&fc=${textColor}`;
+    const thumbnailUrl = `https://placehold.co/400x300/png?text=${safeTitle}&font=cinzel&bg=${bgColor}&fc=${textColor}`;
+
+    // For video mediaType, still use image placeholders (thumbnail + poster)
+    return { mediaUrl, thumbnailUrl };
+  };
+
   // YouTube modal (Add / Edit)
   const [youtubeModal, setYoutubeModal] = useState<{
     open: boolean;
@@ -399,7 +426,7 @@ export default function AdminPage() {
               Mandali Admin Access
             </h2>
             <p className="text-xs text-amber-300/70">
-              पं. रामेश्वर शर्मा एवं श्री बांके बिहारी मानस जागरण मंडल
+              पं. संजीव गोस्वामी एवं श्री बांके बिहारी मानस जागरण मंडल
             </p>
           </div>
 
@@ -1318,25 +1345,18 @@ export default function AdminPage() {
               onSubmit={async (e) => {
                 e.preventDefault();
                 const form = e.currentTarget;
-                const payload = {
-                  title: (form.elements.namedItem("title") as HTMLInputElement).value,
-                  titleHi: (form.elements.namedItem("titleHi") as HTMLInputElement).value,
-                  category: (form.elements.namedItem("category") as HTMLSelectElement).value,
-                  mediaType: (form.elements.namedItem("mediaType") as HTMLSelectElement).value,
-                  mediaUrl: (form.elements.namedItem("mediaUrl") as HTMLInputElement).value,
-                  thumbnailUrl: (form.elements.namedItem("thumbnailUrl") as HTMLInputElement).value,
-                  location: (form.elements.namedItem("location") as HTMLInputElement).value,
-                  eventDate: (form.elements.namedItem("eventDate") as HTMLInputElement).value,
-                  description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
-                };
-
+                
+                // Collect all form data including file upload
+                const formData = new FormData(form);
+                
                 try {
                   const url = galleryModal.mode === "add" ? "/api/gallery" : `/api/gallery/${galleryModal.item?.id}`;
-                  const method = galleryModal.mode === "add" ? "POST" : "PUT";
+                  
+                  // Use FormData directly - no need for Content-Type header, 
+                  // browser will set multipart/form-data automatically
                   const res = await fetch(url, {
-                    method,
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(payload),
+                    method: galleryModal.mode === "add" ? "POST" : "PUT",
+                    body: formData,
                   });
                   const data = await res.json();
                   if (data.success) {
@@ -1394,35 +1414,127 @@ export default function AdminPage() {
                 <div>
                   <label className="font-semibold text-amber-300">Media Type *</label>
                   <select
-                    name="mediaType"
-                    defaultValue={galleryModal.item?.mediaType || "image"}
+                    name="category"
+                    defaultValue={galleryModal.item?.category || "jagran"}
                     className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-white"
                   >
-                    <option value="image">Photo (Image)</option>
-                    <option value="video">Video</option>
+                    <option value="jagran">Mata Ka Jagran</option>
+                    <option value="sundarkand">Sundarkand Paath</option>
+                    <option value="keertan">Khatu Shyam Keertan</option>
+                    <option value="chowki">Mata Ki Chowki</option>
+                    <option value="aarti">Maha Aarti</option>
                   </select>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="font-semibold text-amber-300">Media Type *</label>
+                    <select
+                      name="mediaType"
+                      defaultValue={galleryModal.item?.mediaType || "image"}
+                      className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-white"
+                    >
+                      <option value="image">Photo (Image)</option>
+                      <option value="video">Video</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="font-semibold text-amber-300">Upload File</label>
+                    <input
+                      type="file"
+                      accept="image/*,video/*,video/mp4,video/quicktime"
+                      name="mediaFile"
+                      className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-white"
+                      onChange={(e) => {
+                        if (e.target.files && e.target.files[0]) {
+                          const file = e.target.files[0];
+                          const reader = new FileReader();
+                          reader.onload = (event: any) => {
+                            const previewUrl = event.target.result;
+                            const previewImg = document.getElementById('gallery-preview-img') as HTMLImageElement;
+                            if (previewImg) {
+                              previewImg.src = previewUrl;
+                              document.getElementById('gallery-file-name')!.textContent = file.name;
+                            }
+                          };
+                          reader.readAsDataURL(file);
+                        }
+                      }}
+                    />
+                    <p className="text-xs text-amber-400/60">
+                      <span id="gallery-file-name">No file selected</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <label className="font-semibold text-amber-300">Media URL (Image / Video URL) *</label>
-                <input
-                  required
-                  name="mediaUrl"
-                  defaultValue={galleryModal.item?.mediaUrl || ""}
-                  placeholder="https://... or /images/..."
-                  className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-white"
-                />
+              <div className="space-y-2">
+                <label className="font-semibold text-amber-300 flex items-center gap-2">
+                  <ImageIcon className="w-3.5 h-3.5 text-amber-400" />
+                  Auto-Generated Media URL (Image / Video)
+                </label>
+                <div className="relative">
+                  <input
+                    readOnly
+                    name="mediaUrl"
+                    defaultValue={galleryModal.item?.mediaUrl || ""}
+                    className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-amber-300 text-xs font-mono"
+                  />
+                  <span className="absolute right-3 top-2 text-[10px] text-amber-500/60">
+                    Auto-generated
+                  </span>
+                </div>
+                <p className="text-[10px] text-amber-400/60">
+                  URL is created dynamically from Title + Category + Date on submit.
+                </p>
               </div>
 
-              <div>
-                <label className="font-semibold text-amber-300">Thumbnail URL (Optional)</label>
-                <input
-                  name="thumbnailUrl"
-                  defaultValue={galleryModal.item?.thumbnailUrl || ""}
-                  placeholder="Leave empty to use Media URL"
-                  className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-white"
-                />
+              <div className="space-y-2">
+                <label className="font-semibold text-amber-300 flex items-center gap-2">
+                  <ImageIcon className="w-3.5 h-3.5 text-amber-400" />
+                  Auto-Generated Thumbnail URL
+                </label>
+                <div className="relative">
+                  <input
+                    readOnly
+                    name="thumbnailUrl"
+                    defaultValue={galleryModal.item?.thumbnailUrl || ""}
+                    className="w-full px-3 py-2 rounded-xl bg-[#221309] border border-amber-800 text-amber-300 text-xs font-mono"
+                  />
+                  <span className="absolute right-3 top-2 text-[10px] text-amber-500/60">
+                    Auto-generated
+                  </span>
+                </div>
+                <p className="text-[10px] text-amber-400/60">
+                  Thumbnail is derived from the same media URL.
+                </p>
+              </div>
+
+              {/* Live Preview of Generated Image */}
+              <div className="bg-[#221309] rounded-xl border border-amber-800/50 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] font-semibold text-amber-400 uppercase tracking-wider">
+                    Live Preview
+                  </span>
+                  <span className="text-[10px] text-amber-500/70">
+                    {(galleryModal.item?.mediaType || "image") === "video" ? "Video Poster" : "Image"}
+                  </span>
+                </div>
+                <div className="aspect-video bg-black rounded-lg overflow-hidden flex items-center justify-center">
+                  <img
+                    src={galleryModal.item?.mediaUrl || `https://placehold.co/800x450/png?text=${encodeURIComponent(galleryModal.item?.title || "Preview")}&font=cinzel&bg=7c2d12&fc=f7eedf`}
+                    alt={galleryModal.item?.title || "Preview"}
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                  {(galleryModal.item?.mediaType || "image") === "video" && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg">
+                        <Play className="w-5 h-5 fill-white ml-0.5" />
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3">

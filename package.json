@@ -12,13 +12,15 @@
     "db:setup": "npm run db:migrate && npm run db:seed"
   },
   "dependencies": {
+    "busboy": "^1.6.0",
     "dotenv": "17.3.1",
     "drizzle-orm": "0.45.2",
     "lucide-react": "^1.75.0",
     "next": "^16.4.6",
     "pg": "8.20.0",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react-dom": "19.2.6",
+    "uuid": "^14.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.17",

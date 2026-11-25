@@ -5,7 +5,7 @@
       "routeType": "page",
       "response": "complete",
       "compute": "static",
-      "htmlSize": 108608,
+      "htmlSize": 108605,
       "experimentalBypassFor": [
         {
           "type": "header",

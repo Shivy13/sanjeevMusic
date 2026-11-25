@@ -64,7 +64,23 @@ self.__SERVER_FILES_MANIFEST={
           "search": ""
         }
       ],
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "images.pexels.com",
+          "pathname": "/**"
+        },
+        {
+          "protocol": "https",
+          "hostname": "img.youtube.com",
+          "pathname": "/**"
+        },
+        {
+          "protocol": "https",
+          "hostname": "placehold.co",
+          "pathname": "/**"
+        }
+      ],
       "qualities": [
         75
       ],

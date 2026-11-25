@@ -223,7 +223,7 @@ export default function BookingSection() {
         {activeTab === "calendar" && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Interactive Calendar (7 Cols) */}
-            <div className="lg:col-span-7 bg-[#140c06] rounded-2xl border border-amber-900/40 p-6 sm:p-8 shadow-xl shadow-black/60">
+            <div suppressHydrationWarning className="lg:col-span-7 bg-[#140c06] rounded-2xl border border-amber-900/40 p-6 sm:p-8 shadow-xl shadow-black/60">
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-amber-900/40">
                 <div>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-amber-100">

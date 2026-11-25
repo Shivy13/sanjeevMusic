@@ -9,7 +9,7 @@ export async function seedDatabase() {
   // 1. Default Settings
   const defaultSettings = [
     { settingKey: "organizer_name_en", settingValue: "Pt. Sanjiv Goswami & Shree Banke Bihari Jagran Mandali" },
-    { settingKey: "organizer_name_hi", settingValue: "पं. रामेश्वर शर्मा एवं श्री बांके बिहारी जागरण व सुंदरकांड मंडल" },
+    { settingKey: "organizer_name_hi", settingValue: "पं. संजीव गोस्वामी एवं श्री बांके बिहारी जागरण व सुंदरकांड मंडल" },
     { settingKey: "organizer_phone", settingValue: "+919876543210" },
     { settingKey: "organizer_whatsapp", settingValue: "+919876543210" },
     { settingKey: "organizer_email", settingValue: "bhaktiras.mandali@gmail.com" },
@@ -17,7 +17,7 @@ export async function seedDatabase() {
     { settingKey: "organizer_address_hi", settingValue: "बी-42, मंदिर मार्ग, प्राचीन हनुमान मंदिर के समीप, कनाट प्लेस, नई दिल्ली - 110001" },
     { settingKey: "youtube_channel_id", settingValue: "UC123456789DevotionalChannel" },
     { settingKey: "admin_password", settingValue: "ADMIN" },
-    { settingKey: "welcome_marquee_en", settingValue: "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ Bookings open for upcoming Navratri, Ekadashi & Hanuman Jayanti ॥ Contact: +91 98765 43210" },
+    { settingKey: "welcome_marquee_en", settingValue: "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ Bookings open for upcoming Navratri, Ekadashi & Hanuman Jayanti ॥ Contact: +91 9891142916" },
     { settingKey: "welcome_marquee_hi", settingValue: "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ आगामी नवरात्र, एकादशी एवं हनुमान जयंती हेतु बुकिंग जारी ॥ संपर्क: 98765 43210" },
   ];
 
@@ -39,7 +39,7 @@ export async function seedDatabase() {
         title: "Grand Navratri Mata Ki Chowki & Akhand Jyoti",
         titleHi: "भव्य नवरात्रि माता की चौकी एवं अखंड ज्योति",
         description: "Special Navratri night with divine bhawan decoration, 56 Bhog and soulful Mata Bhetan by Pt. Sanjiv Goswami.",
-        descriptionHi: "दिव्य भवन शृंगार, ५६ भोग एवं पं. रामेश्वर शर्मा जी द्वारा मनमोहक माता की भेंटों की पावन निशा।",
+        descriptionHi: "दिव्य भवन शृंगार, ५६ भोग एवं पं. संजीव गोस्वामी जी द्वारा मनमोहक माता की भेंटों की पावन निशा।",
         category: "chowki",
         mediaType: "image",
         mediaUrl: "/images/mata-ki-chowki.jpg",

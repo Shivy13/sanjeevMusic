@@ -409,6 +409,7 @@ function BookingSection() {
                     className: "grid grid-cols-1 lg:grid-cols-12 gap-8 items-start",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            suppressHydrationWarning: true,
                             className: "lg:col-span-7 bg-[#140c06] rounded-2xl border border-amber-900/40 p-6 sm:p-8 shadow-xl shadow-black/60",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2062,7 +2063,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "tel:+919876543210",
                                                     className: "text-white hover:text-emerald-300 font-semibold",
-                                                    children: "+91 98765 43210"
+                                                    children: "+91 9891142916"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Footer.tsx",
                                                     lineNumber: 117,
@@ -2156,6 +2157,7 @@ function Footer() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex items-center gap-1.5",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                suppressHydrationWarning: true,
                                 children: [
                                     "© ",
                                     new Date().getFullYear(),
@@ -2265,6 +2267,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$image$2d$component$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__Image__as__default$3e$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/image-component.js [app-client] (ecmascript) <export Image as default>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/LanguageContext.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/sparkles.mjs [app-client] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/play.mjs [app-client] (ecmascript) <export default as Play>");
@@ -2279,6 +2282,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function GallerySection() {
     _s();
     const { t, language } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$LanguageContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLanguage"])();
@@ -2289,26 +2293,28 @@ function GallerySection() {
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GallerySection.useEffect": ()=>{
+            const fetchGallery = {
+                "GallerySection.useEffect.fetchGallery": async ()=>{
+                    setLoading(true);
+                    try {
+                        const url = selectedCategory === "all" ? "/api/gallery" : `/api/gallery?category=${selectedCategory}`;
+                        const res = await fetch(url);
+                        const data = await res.json();
+                        if (data.success) {
+                            setItems(data.items || []);
+                        }
+                    } catch (e) {
+                        console.error("Gallery fetch failed:", e);
+                    } finally{
+                        setLoading(false);
+                    }
+                }
+            }["GallerySection.useEffect.fetchGallery"];
             fetchGallery();
         }
     }["GallerySection.useEffect"], [
         selectedCategory
     ]);
-    const fetchGallery = async ()=>{
-        setLoading(true);
-        try {
-            const url = selectedCategory === "all" ? "/api/gallery" : `/api/gallery?category=${selectedCategory}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            if (data.success) {
-                setItems(data.items || []);
-            }
-        } catch (e) {
-            console.error("Gallery fetch failed:", e);
-        } finally{
-            setLoading(false);
-        }
-    };
     const categories = [
         {
             id: "all",
@@ -2355,20 +2361,20 @@ function GallerySection() {
                                     className: "w-3.5 h-3.5 text-amber-400"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: t.galleryBadge
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 69,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2376,7 +2382,7 @@ function GallerySection() {
                             children: t.galleryTitle
                         }, void 0, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 73,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2384,7 +2390,7 @@ function GallerySection() {
                             children: t.gallerySubtitle
                         }, void 0, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 76,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2395,12 +2401,12 @@ function GallerySection() {
                                     children: cat.label
                                 }, cat.id, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 84,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 81,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2412,7 +2418,7 @@ function GallerySection() {
                                     children: language === "hi" ? "सभी माध्यम" : "All Media"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2421,7 +2427,7 @@ function GallerySection() {
                                     children: language === "hi" ? "तस्वीरें (Photos)" : "Photos"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2430,19 +2436,19 @@ function GallerySection() {
                                     children: language === "hi" ? "वीडियो (Videos)" : "Videos"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 116,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 98,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 68,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, this),
                 loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2450,14 +2456,14 @@ function GallerySection() {
                     children: language === "hi" ? "गैलरी लोड हो रही है..." : "Loading portfolio..."
                 }, void 0, false, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 128,
+                    lineNumber: 129,
                     columnNumber: 11
                 }, this) : filteredItems.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "py-20 text-center text-amber-300/60 bg-[#140c06] rounded-2xl border border-amber-900/40 max-w-md mx-auto",
                     children: language === "hi" ? "इस श्रेणी में कोई तस्वीर उपलब्ध नहीं है।" : "No items found in this category."
                 }, void 0, false, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 132,
+                    lineNumber: 133,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
@@ -2471,21 +2477,23 @@ function GallerySection() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "relative aspect-4/3 overflow-hidden bg-black",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$image$2d$component$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__Image__as__default$3e$__["default"], {
                                             src: item.thumbnailUrl || item.mediaUrl,
                                             alt: displayTitle,
+                                            width: 400,
+                                            height: 300,
                                             className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500",
                                             loading: "lazy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 150,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-t from-[#140c06] via-transparent to-black/30 group-hover:via-[#140c06]/30 transition-all"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 160,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2494,18 +2502,18 @@ function GallerySection() {
                                                 className: "w-3.5 h-3.5 fill-amber-300 text-amber-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 165,
                                                 columnNumber: 25
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
                                                 className: "w-3.5 h-3.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 164,
+                                                lineNumber: 167,
                                                 columnNumber: 25
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 163,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2513,13 +2521,13 @@ function GallerySection() {
                                             children: item.category
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 172,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 149,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2532,7 +2540,7 @@ function GallerySection() {
                                                     children: displayTitle
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 180,
                                                     columnNumber: 23
                                                 }, this),
                                                 displayDesc && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2540,13 +2548,13 @@ function GallerySection() {
                                                     children: displayDesc
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 181,
+                                                    lineNumber: 184,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 179,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2559,7 +2567,7 @@ function GallerySection() {
                                                             className: "w-3 h-3 text-amber-500 shrink-0"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 190,
+                                                            lineNumber: 193,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2567,13 +2575,13 @@ function GallerySection() {
                                                             children: item.location
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 191,
+                                                            lineNumber: 194,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 189,
+                                                    lineNumber: 192,
                                                     columnNumber: 25
                                                 }, this),
                                                 item.eventDate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2583,44 +2591,44 @@ function GallerySection() {
                                                             className: "w-3 h-3 text-amber-500 shrink-0"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 196,
+                                                            lineNumber: 199,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: item.eventDate
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                                            lineNumber: 197,
+                                                            lineNumber: 200,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                                    lineNumber: 195,
+                                                    lineNumber: 198,
                                                     columnNumber: 25
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/GallerySection.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 190,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 175,
+                                    lineNumber: 178,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, item.id, true, {
                             fileName: "[project]/src/components/GallerySection.tsx",
-                            lineNumber: 142,
+                            lineNumber: 143,
                             columnNumber: 17
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 136,
+                    lineNumber: 137,
                     columnNumber: 11
                 }, this),
                 selectedItem && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2637,12 +2645,12 @@ function GallerySection() {
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 226,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 219,
+                                lineNumber: 222,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2655,7 +2663,7 @@ function GallerySection() {
                                     allowFullScreen: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 229,
+                                    lineNumber: 232,
                                     columnNumber: 19
                                 }, this) : selectedItem.mediaType === "video" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                                     src: selectedItem.mediaUrl,
@@ -2664,7 +2672,7 @@ function GallerySection() {
                                     className: "max-h-[65vh] w-auto max-w-full"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 237,
+                                    lineNumber: 240,
                                     columnNumber: 19
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: selectedItem.mediaUrl,
@@ -2672,12 +2680,12 @@ function GallerySection() {
                                     className: "max-h-[65vh] w-auto max-w-full object-contain"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/GallerySection.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 242,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 227,
+                                lineNumber: 230,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2691,7 +2699,7 @@ function GallerySection() {
                                                 children: language === "hi" ? selectedItem.titleHi || selectedItem.title : selectedItem.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 250,
+                                                lineNumber: 253,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2699,13 +2707,13 @@ function GallerySection() {
                                                 children: selectedItem.category.toUpperCase()
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 253,
+                                                lineNumber: 256,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 252,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2713,7 +2721,7 @@ function GallerySection() {
                                         children: language === "hi" ? selectedItem.descriptionHi || selectedItem.description : selectedItem.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                        lineNumber: 258,
+                                        lineNumber: 261,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2729,20 +2737,20 @@ function GallerySection() {
                                                                 className: "w-3.5 h-3.5 text-amber-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 266,
+                                                                lineNumber: 269,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: selectedItem.location
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 267,
+                                                                lineNumber: 270,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 265,
+                                                        lineNumber: 268,
                                                         columnNumber: 23
                                                     }, this),
                                                     selectedItem.eventDate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2752,26 +2760,26 @@ function GallerySection() {
                                                                 className: "w-3.5 h-3.5 text-amber-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 272,
+                                                                lineNumber: 275,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: selectedItem.eventDate
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                                lineNumber: 273,
+                                                                lineNumber: 276,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 271,
+                                                        lineNumber: 274,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 263,
+                                                lineNumber: 266,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2783,54 +2791,54 @@ function GallerySection() {
                                                         children: t.bookNow
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 283,
+                                                        lineNumber: 286,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
                                                         className: "w-3.5 h-3.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                                        lineNumber: 284,
+                                                        lineNumber: 287,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                                lineNumber: 278,
+                                                lineNumber: 281,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/GallerySection.tsx",
-                                        lineNumber: 262,
+                                        lineNumber: 265,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/GallerySection.tsx",
-                                lineNumber: 248,
+                                lineNumber: 251,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/GallerySection.tsx",
-                        lineNumber: 214,
+                        lineNumber: 217,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/GallerySection.tsx",
-                    lineNumber: 210,
+                    lineNumber: 213,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/GallerySection.tsx",
-            lineNumber: 66,
+            lineNumber: 67,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/GallerySection.tsx",
-        lineNumber: 65,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 }
@@ -3635,7 +3643,7 @@ function MarqueeTicker() {
     }["MarqueeTicker.useEffect"], [
         language
     ]);
-    const defaultText = language === "hi" ? "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ आगामी नवरात्र, हनुमान जन्मोत्सव एवं एकादशी संकीर्तन हेतु अग्रिम बुकिंग जारी ॥ संपर्क: +91 98765 43210 ॥ संगीतमय सुंदरकांड पाठ एवं विशाल भगवती जागरण ॥" : "॥ Jai Mata Di ॥ Jai Shree Ram ॥ Hare Ka Sahara Baba Shyam Hamara ॥ Advance Bookings open for upcoming Navratri, Hanuman Jayanti & Ekadashi ॥ Contact: +91 98765 43210 ॥";
+    const defaultText = language === "hi" ? "॥ जय माता दी ॥ जय श्री राम ॥ हारे का सहारा बाबा श्याम हमारा ॥ आगामी नवरात्र, हनुमान जन्मोत्सव एवं एकादशी संकीर्तन हेतु अग्रिम बुकिंग जारी ॥ संपर्क: +91 9891142916 ॥ संगीतमय सुंदरकांड पाठ एवं विशाल भगवती जागरण ॥" : "॥ Jai Mata Di ॥ Jai Shree Ram ॥ Hare Ka Sahara Baba Shyam Hamara ॥ Advance Bookings open for upcoming Navratri, Hanuman Jayanti & Ekadashi ॥ Contact: +91 9891142916 ॥";
     const display = tickerText || defaultText;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-gradient-to-r from-[#200e05] via-[#351608] to-[#200e05] border-y border-amber-800/40 py-2.5 overflow-hidden text-amber-300",
@@ -4163,7 +4171,7 @@ function TestimonialsSection() {
     const testimonialsHi = [
         {
             id: 1,
-            quote: "पं. रामेश्वर शर्मा जी एवं मंडल द्वारा आयोजित नवरात्रि जागरण वास्तव में अलौकिक था। मां काली का तांडव एवं तारा रानी की पावन कथा ने संपूर्ण वातावरण को भक्तिमय बना दिया।",
+            quote: "पं. संजीव गोस्वामी जी एवं मंडल द्वारा आयोजित नवरात्रि जागरण वास्तव में अलौकिक था। मां काली का तांडव एवं तारा रानी की पावन कथा ने संपूर्ण वातावरण को भक्तिमय बना दिया।",
             name: "श्री राजेश अग्रवाल",
             role: "यजमान एवं समिति सदस्य",
             location: "रोहिणी, दिल्ली",
